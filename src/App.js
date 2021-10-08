@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import store from './store'
 import HYAppFooter from 'components/app-footer'
 import HYAppHeader from 'components/app-header'
-
+import   HYAppPlayerBar from './pages/player/app-player-bar/index'
 export default memo(function App() {
   return (
     <Provider store={store}>
@@ -16,7 +16,9 @@ export default memo(function App() {
      <HYAppHeader/>
      {renderRoutes(routes)}
      <HYAppFooter/>
+     < HYAppPlayerBar/>
     </HashRouter>
+    
     </Provider>
   )
 })
