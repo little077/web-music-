@@ -3,6 +3,7 @@
   const data =Map({
     topBanners: [],
     hotRecommends:[],
+    newAlbums:[]
   })
   function reducer(state=data,action){
     switch(action.type){
@@ -10,6 +11,8 @@
         return state.set('topBanners',action.topBanners)
       case actionTypes.CHANGE_HOT_RECOMMEND:
         return state.set('hotRecommends',action.hotRecommend)
+      case actionTypes.CHANGE_NEW_ALBUM:
+        return state.set('newAlbums',action.newAlbums)
         default:
         return state
     }
